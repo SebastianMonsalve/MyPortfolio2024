@@ -1,6 +1,6 @@
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ handleChange, isChecked }) => {
   return (
     <header>
       <div className="banner">
@@ -9,20 +9,28 @@ const Header = () => {
           alt="Banner image to Sebastian Monsalve"
           draggable="false"
         />
-        <div className="container-switch">
-          <div className="switch">
-            <i className="bx bxs-sun"></i>
-            <i className="bx bxs-moon"></i>
-          </div>
+        <div>
+          <input
+            type="checkbox"
+            id="check"
+            className="toggle"
+            onChange={handleChange}
+            checked={isChecked}
+          />
+          <label htmlFor="check" className="toggle-container">
+            {" "}
+            <i class="bx bxs-sun"></i>
+            <i class="bx bxs-moon"></i>
+          </label>
           <audio id="switchSound">
-            <source src="/resources/sound-click.mp3" type="audio/mp3" />
+            <source src="/sound-click.mp3" type="audio/mp3" />
           </audio>
         </div>
       </div>
       <div className="container-info">
         <div className="profile">
           <img
-            src="/public/profile.jpg"
+            src="/Profile.jpg"
             alt="Profile photo to Sebastian Monsalve"
             draggable="false"
           />

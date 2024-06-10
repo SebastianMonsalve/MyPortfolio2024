@@ -8,7 +8,7 @@ function App() {
   const [isDark, setIsDark] = useState(true);
   return (
     <div className="App" data-theme={isDark ? "dark" : "light"}>
-      <Header />
+      <Header isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
     </div>
   );
 }

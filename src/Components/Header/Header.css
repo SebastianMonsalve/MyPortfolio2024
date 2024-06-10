@@ -1,0 +1,197 @@
+header {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  background: var(--color-primary);
+}
+.banner {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+.banner img {
+  width: 100%;
+  object-fit: cover;
+}
+.container-switch {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+.switch {
+  width: 3.5rem;
+  height: 1.85rem;
+  position: relative;
+  padding: 0 0.39rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 7rem;
+  cursor: pointer;
+  border: var(--color-primary) solid 0.2rem;
+  background: var(--color-primary);
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+.switch i {
+  font-size: 1.1em;
+  color: var(--color-switch);
+}
+.switch::before {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  left: 0;
+  right: unset;
+  background: var(--color-switch);
+  transition: transform 0.3s ease;
+}
+.switch.active::before {
+  transform: translateX(110%);
+}
+.container-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.profile {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile img {
+  display: flex;
+  width: 100%;
+  object-fit: cover;
+}
+.presentation {
+  width: calc(100% - 10rem);
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem;
+}
+.presentation h1 {
+  font-size: 2.25em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  color: var(--color-fourth);
+}
+.presentation h1 i {
+  font-size: 0.3em;
+  padding-left: 0.4rem;
+  color: var(--color-second);
+}
+.sub {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font-size: 0.85em;
+  color: var(--color-second);
+  margin-bottom: 0.8rem;
+}
+.sub i {
+  padding-right: 0.4rem;
+}
+.presentation p {
+  width: 90%;
+  font-size: 0.85em;
+  color: var(--color-second);
+  text-wrap: balance;
+  margin-bottom: 0.8rem;
+}
+.link {
+  width: fit-content;
+  color: var(--color-sixth);
+  font-size: 0.85em;
+  margin-bottom: 1rem;
+}
+.social {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.social a:hover {
+  background: var(--color-fifth);
+  border-color: var(--color-fifth);
+}
+.social .in {
+  background: var(--color-third);
+  padding: 0 1rem;
+  border-radius: 1.2rem;
+  color: var(--color-fourth);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social .in i {
+  padding-right: 0.5rem;
+}
+.social .in span {
+  padding-left: 0.6rem;
+}
+.social .soc {
+  border: 0.15rem solid var(--color-third);
+  padding: 0.2rem 1rem;
+  border-radius: 1.2rem;
+  color: var(--color-fourth);
+  font-size: 1.2em;
+}
+nav {
+  width: 100%;
+  padding-left: 2rem;
+  background: var(--color-primary);
+  top: 0;
+}
+nav ol {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+nav ol li {
+  color: var(--color-second);
+  cursor: pointer;
+  position: relative;
+  font-size: 1em;
+  margin-bottom: 0.82rem;
+}
+nav ol li::before {
+  content: "";
+  width: 100%;
+  height: 0.15rem;
+  position: absolute;
+  bottom: -0.76rem;
+  border-radius: 1rem;
+  background: transparent;
+}
+nav ol li:hover::before {
+  background: var(--color-second);
+}
+nav ol li.active {
+  color: var(--color-fourth);
+}
+nav ol li.active::before {
+  background: var(--color-fourth);
+}
+.line {
+  width: 100%;
+  height: 0.05rem;
+  background: var(--color-auxiliary);
+}

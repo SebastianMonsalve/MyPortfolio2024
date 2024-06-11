@@ -2,6 +2,13 @@ import React from "react";
 import "./Header.css";
 
 const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
+  const audio = new Audio("/sound-click.mp3");
+
+  const handleCheckboxChange = (event) => {
+    audio.play();
+    handleChange(event);
+  };
+
   return (
     <header>
       <div className="banner">
@@ -15,17 +22,13 @@ const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
             type="checkbox"
             id="check"
             className="toggle"
-            onChange={handleChange}
+            onChange={handleCheckboxChange}
             checked={isChecked}
           />
           <label htmlFor="check" className="toggle-container">
-            {" "}
             <i className="bx bxs-sun"></i>
             <i className="bx bxs-moon"></i>
           </label>
-          <audio id="switchSound">
-            <source src="/sound-click.mp3" type="audio/mp3" />
-          </audio>
         </div>
       </div>
       <div className="container-info">

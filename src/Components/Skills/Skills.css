@@ -27,7 +27,6 @@
   color: var(--color-second);
   margin-bottom: 0.6rem;
   cursor: default;
-  transition: 0.2s all;
 }
 .category span p {
   position: relative;
@@ -38,9 +37,39 @@
 }
 .category span:hover {
   color: var(--color-fourth);
-  letter-spacing: 0.15rem;
-  transition: 0.2s all;
 }
 .category span:hover i {
   color: var(--color-sixth);
+}
+@media screen and (max-width: 70.3rem) {
+  .skillsContainer {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 50rem) {
+  .skillsContainer {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    padding: 1rem;
+    padding-bottom: 5rem;
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 42.5rem) {
+  .skillsContainer {
+    width: 95%;
+    display: block;
+    padding: 1rem;
+    padding-bottom: 5rem;
+  }
+}
+@media screen and (max-width: 34.4rem) {
+  .skillsContainer {
+    width: 95%;
+    padding: 0.5rem;
+    padding-bottom: 5rem;
+  }
 }

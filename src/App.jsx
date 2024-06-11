@@ -5,6 +5,7 @@ import Projects from "./Components/Projects/Projects";
 import Skills from "./Components/Skills/Skills";
 import About from "./Components/About/About";
 import Education from "./Components/Education/Education";
+import Footer from "./Components/Footer/Footer";
 import "./App.css";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         selectedSection={selectedSection}
       />
       <div className="container-primary">{renderSection()}</div>
+      <Footer />
     </div>
   );
 }

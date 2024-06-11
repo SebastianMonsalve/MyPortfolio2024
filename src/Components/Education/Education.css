@@ -15,14 +15,6 @@
   margin-bottom: 1rem;
   transition: 0.2s all;
 }
-.education:hover h3 {
-  letter-spacing: 0.1rem;
-  transition: 0.2s all;
-}
-.education:hover p {
-  letter-spacing: 0.1rem;
-  transition: 0.2s all;
-}
 .education:hover .icon-edu i {
   color: var(--color-sixth);
 }
@@ -54,4 +46,37 @@
 .content-edu p {
   font-size: 0.9em;
   color: var(--color-second);
+}
+@media screen and (max-width: 70.3rem) {
+  .educationContainer {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 50rem) {
+  .educationContainer {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    padding: 1rem;
+    padding-bottom: 5rem;
+  }
+  .education {
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 42.5rem) {
+  .educationContainer {
+    width: 95%;
+    padding: 1rem;
+    padding-bottom: 5rem;
+  }
+}
+@media screen and (max-width: 34.4rem) {
+  .educationContainer {
+    width: 95%;
+    padding: 0.5rem;
+    padding-bottom: 5rem;
+  }
 }

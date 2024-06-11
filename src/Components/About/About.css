@@ -84,3 +84,60 @@
 .options-box i:hover {
   background: var(--color-third);
 }
+@media screen and (max-width: 70.3rem) {
+  .aboutContainer {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 50rem) {
+  .aboutContainer {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    padding: 1rem;
+    padding-bottom: 5rem;
+    margin-top: 0.5rem;
+  }
+  .about-box {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 42.5rem) {
+  .aboutContainer {
+    width: 95%;
+    display: block;
+    padding: 1rem;
+    padding-bottom: 5rem;
+  }
+  .image-box {
+    width: 28rem;
+  }
+}
+@media screen and (max-width: 34.4rem) {
+  .aboutContainer {
+    width: 95%;
+    padding: 0.5rem;
+    padding-bottom: 5rem;
+  }
+  .image-box {
+    width: 21rem;
+  }
+}
+@media screen and (max-width: 30.75rem) {
+  .image-profile-box {
+    width: 2rem;
+    height: 2rem;
+  }
+  .content-info-box {
+    width: calc(100% - 2rem);
+  }
+  .image-box {
+    width: 15rem;
+  }
+  .options-box {
+    padding-left: 2.5rem;
+  }
+}

@@ -1,0 +1,14 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  font-size: 0.9em;
+  cursor: default;
+  color: var(--color-second);
+}

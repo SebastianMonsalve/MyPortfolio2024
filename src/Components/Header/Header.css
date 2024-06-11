@@ -190,8 +190,10 @@ nav ol li::before {
   border-radius: 1rem;
   background: transparent;
 }
-nav ol li:hover::before {
-  background: var(--color-second);
+@media (hover: hover) {
+  nav ol li:hover::before {
+    background: var(--color-second);
+  }
 }
 nav ol li.active {
   color: var(--color-fourth);
@@ -203,4 +205,52 @@ nav ol li.active::before {
   width: 100%;
   height: 0.05rem;
   background: var(--color-auxiliary);
+}
+
+@media screen and (max-width: 70.3rem) {
+  header {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 50rem) {
+  header {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 42.5rem) {
+  .profile {
+    width: 6rem;
+    height: 6rem;
+  }
+  .presentation {
+    width: calc(100% - 6rem);
+  }
+}
+@media screen and (max-width: 34.4rem) {
+  .profile {
+    margin: 1rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  .container-info {
+    flex-direction: column;
+    padding: 0;
+  }
+  .presentation {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 30.75rem) {
+  .banner img {
+    width: 130%;
+  }
+  .presentation {
+    width: 100%;
+  }
+  nav {
+    padding: 0;
+  }
+  nav ol {
+    justify-content: space-evenly;
+  }
 }

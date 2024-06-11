@@ -27,18 +27,10 @@
   color: var(--color-second);
   margin-bottom: 0.6rem;
   cursor: default;
+  transition: 0.2s all;
 }
 .category span p {
   position: relative;
-}
-.category span:hover p::before {
-  content: "";
-  position: absolute;
-  width: 2rem;
-  height: 0.1rem;
-  background-color: var(--color-sixth);
-  right: -2.8rem;
-  top: 50%;
 }
 .category span i {
   font-size: 1.6em;
@@ -47,6 +39,7 @@
 .category span:hover {
   color: var(--color-fourth);
   letter-spacing: 0.15rem;
+  transition: 0.2s all;
 }
 .category span:hover i {
   color: var(--color-sixth);

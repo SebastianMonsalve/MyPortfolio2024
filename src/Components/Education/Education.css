@@ -1,0 +1,57 @@
+.educationContainer {
+  width: 65%;
+  position: relative;
+  padding: 1.5rem 0;
+  padding-bottom: 5rem;
+  overflow-x: hidden;
+}
+.education {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 2rem;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  transition: 0.2s all;
+}
+.education:hover h3 {
+  letter-spacing: 0.1rem;
+  transition: 0.2s all;
+}
+.education:hover p {
+  letter-spacing: 0.1rem;
+  transition: 0.2s all;
+}
+.education:hover .icon-edu i {
+  color: var(--color-sixth);
+}
+.icon-edu {
+  width: 2rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-edu i {
+  font-size: 1.5em;
+  color: var(--color-fifth);
+}
+.content-edu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: default;
+}
+.content-edu h5 {
+  font-size: 0.7em;
+  color: var(--color-fifth);
+}
+.content-edu h3 {
+  font-size: 1.05em;
+  color: var(--color-fourth);
+}
+.content-edu p {
+  font-size: 0.9em;
+  color: var(--color-second);
+}

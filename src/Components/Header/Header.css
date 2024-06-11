@@ -179,12 +179,12 @@ nav ol li {
   cursor: pointer;
   position: relative;
   font-size: 1em;
-  margin-bottom: 0.82rem;
+  margin-bottom: 0.83rem;
 }
 nav ol li::before {
   content: "";
   width: 100%;
-  height: 0.15rem;
+  height: 0.2rem;
   position: absolute;
   bottom: -0.76rem;
   border-radius: 1rem;

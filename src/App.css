@@ -1,11 +1,19 @@
 .App {
-  width: 100vw;
+  width: calc(100vw - -webkit-scrollbar);
   min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   display: flex;
   overflow-x: hidden;
+  position: relative;
+  background: var(--color-primary);
+}
+.container-primary {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
   position: relative;
   background: var(--color-primary);
 }

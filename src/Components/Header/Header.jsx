@@ -1,6 +1,7 @@
+import React from "react";
 import "./Header.css";
 
-const Header = ({ handleChange, isChecked }) => {
+const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
   return (
     <header>
       <div className="banner">
@@ -19,8 +20,8 @@ const Header = ({ handleChange, isChecked }) => {
           />
           <label htmlFor="check" className="toggle-container">
             {" "}
-            <i class="bx bxs-sun"></i>
-            <i class="bx bxs-moon"></i>
+            <i className="bx bxs-sun"></i>
+            <i className="bx bxs-moon"></i>
           </label>
           <audio id="switchSound">
             <source src="/sound-click.mp3" type="audio/mp3" />
@@ -92,10 +93,34 @@ const Header = ({ handleChange, isChecked }) => {
       </div>
       <nav>
         <ol id="menu">
-          <li id="projects">Projects</li>
-          <li id="skills">Skills</li>
-          <li id="about">About Me</li>
-          <li id="education">Education</li>
+          <li
+            id="projects"
+            className={selectedSection === "projects" ? "active" : ""}
+            onClick={() => onMenuClick("projects")}
+          >
+            Projects
+          </li>
+          <li
+            id="skills"
+            className={selectedSection === "skills" ? "active" : ""}
+            onClick={() => onMenuClick("skills")}
+          >
+            Skills
+          </li>
+          <li
+            id="about"
+            className={selectedSection === "about" ? "active" : ""}
+            onClick={() => onMenuClick("about")}
+          >
+            About Me
+          </li>
+          <li
+            id="education"
+            className={selectedSection === "education" ? "active" : ""}
+            onClick={() => onMenuClick("education")}
+          >
+            Education
+          </li>
         </ol>
       </nav>
       <div className="line"></div>

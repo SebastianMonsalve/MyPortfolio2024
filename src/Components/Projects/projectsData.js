@@ -1,6 +1,24 @@
 export const ProjectsData = [
   {
-    id: 1,
+    title: "Mobile programming learning application",
+    image: "/code-journey.jpg",
+    year: 2024,
+    tech: [
+      "React Native",
+      "JavaScript",
+      "MongoDB",
+      "Redux Toolkit",
+      "NodeJS",
+      "Express",
+      "Stripe",
+      "Cloudinary",
+    ],
+    description:
+      "CODE JOURNEY.  Our app offers interactive lessons, practical exercises, and progress tracking tools for both beginners and experts. Start your journey with us and achieve your educational goals effectively and enjoyably! With gamified lessons, rankings, achievements, and a fun, effective, and free learning experience, Code Journey makes learning programming feel like a game, effortlessly forming a habit of learning.",
+    github: "https://github.com/SebastianMonsalve/pixme-frontend",
+    web: "https://pixme-frontend-sgb0.onrender.com/",
+  },
+  {
     title: "Online multimedia gallery",
     image: "/pixme.png",
     year: 2023,
@@ -11,7 +29,6 @@ export const ProjectsData = [
     web: "https://pixme-frontend-sgb0.onrender.com/",
   },
   {
-    id: 2,
     title: "Interactive Education Platform",
     image: "/swift-admin.png",
     year: 2023,
@@ -22,7 +39,6 @@ export const ProjectsData = [
     web: "https://file-manager-frontend.onrender.com/",
   },
   {
-    id: 3,
     title: "Billing system for hotels",
     image: "/hotel-billing-system.png",
     year: 2023,

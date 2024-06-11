@@ -1,5 +1,4 @@
-// App.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Components/Header/Header";
 import Projects from "./Components/Projects/Projects";
 import Skills from "./Components/Skills/Skills";
@@ -9,8 +8,15 @@ import Footer from "./Components/Footer/Footer";
 import "./App.css";
 
 function App() {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme ? savedTheme === "dark" : true;
+  });
   const [selectedSection, setSelectedSection] = useState("projects");
+
+  useEffect(() => {
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  }, [isDark]);
 
   const renderSection = () => {
     switch (selectedSection) {
@@ -22,6 +28,8 @@ function App() {
         return <About />;
       case "education":
         return <Education />;
+      default:
+        return <Projects />;
     }
   };
 

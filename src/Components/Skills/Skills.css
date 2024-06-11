@@ -1,0 +1,53 @@
+.skillsContainer {
+  width: 65%;
+  position: relative;
+  padding: 1.5rem 0;
+  padding-bottom: 5rem;
+  overflow-x: hidden;
+}
+.category {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+.category h3 {
+  font-size: 1.3;
+  margin-bottom: 0.8rem;
+  color: var(--color-fourth);
+}
+.category span {
+  width: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  padding-left: 1.2rem;
+  color: var(--color-second);
+  margin-bottom: 0.6rem;
+  cursor: default;
+}
+.category span p {
+  position: relative;
+}
+.category span:hover p::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 0.1rem;
+  background-color: var(--color-sixth);
+  right: -2.8rem;
+  top: 50%;
+}
+.category span i {
+  font-size: 1.6em;
+  padding-right: 0.5rem;
+}
+.category span:hover {
+  color: var(--color-fourth);
+  letter-spacing: 0.15rem;
+}
+.category span:hover i {
+  color: var(--color-sixth);
+}

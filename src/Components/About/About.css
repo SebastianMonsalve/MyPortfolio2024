@@ -38,11 +38,13 @@
 .content-info-box h2 {
   font-size: 1em;
   margin-bottom: 0.2rem;
+  color: var(--color-fourth);
 }
 .content-info-box p {
   font-size: 0.9em;
   text-wrap: balance;
   margin-bottom: 1rem;
+  color: var(--color-fourth);
 }
 .container-box {
   width: 100%;

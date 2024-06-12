@@ -1,20 +1,35 @@
 import React from "react";
 import "./Projects.css";
 import { ProjectsData } from "./projectsData";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t, i18n } = useTranslation();
+
+  const translateData = (data) => {
+    return data.map((item) => {
+      return {
+        ...item,
+        title: item.title[i18n.language],
+        description: item.description[i18n.language],
+      };
+    });
+  };
+
+  const Projects = translateData(ProjectsData);
+
   return (
     <section className="projectsContainer">
-      {ProjectsData.map((item, index) => (
+      {Projects.map((item, index) => (
         <div key={index} className="project">
           <div className="image-project">
             <img src={item.image} alt={item.title} draggable="false" />
             <div className="options-project">
               <a href={item.github} target="_blank">
-                <i className="fa-brands fa-github" title="View GitHub" />
+                <i className="fa-brands fa-github" title={t("github")} />
               </a>
               <a href={item.web} target="_blank">
-                <i className="fa-solid fa-link" title="View website" />
+                <i className="fa-solid fa-link" title={t("web")} />
               </a>
             </div>
           </div>
@@ -26,7 +41,9 @@ const Projects = () => {
                   @sebasmonsalve16{" "}
                   <i className="fa-solid fa-circle-check" title="verified" />
                 </span>
-                <span>Developed in {item.year}</span>
+                <span>
+                  {t("developed")} {item.year}
+                </span>
               </div>
               <div className="sub-tech">
                 {item.tech.map((tech, index) => (

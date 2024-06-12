@@ -81,8 +81,70 @@
   padding: 0.4rem;
   border-radius: 50%;
 }
-.options-box i:hover {
-  background: var(--color-third);
+.options-box i.active {
+  color: var(--color-fourth);
+}
+.options-box i.active.like {
+  animation: like 0.8s linear;
+}
+@keyframes like {
+  0% {
+    transform: rotate(0deg) scale(1);
+    color: rgb(112, 255, 112);
+  }
+  10% {
+    transform: rotate(-5deg) scale(1.05);
+    color: rgb(110, 190, 110);
+  }
+  20% {
+    transform: rotate(-10deg) scale(1.1);
+    color: rgb(110, 50, 110);
+  }
+  30% {
+    transform: rotate(-15deg) scale(1.15);
+    color: rgb(183, 125, 110);
+  }
+  40% {
+    transform: rotate(-20deg) scale(1.2);
+    color: rgb(255, 199, 94);
+  }
+  50% {
+    transform: rotate(-25deg) scale(1.25);
+    color: rgb(255, 220, 94);
+  }
+  60% {
+    transform: rotate(-30deg) scale(1.3);
+    color: rgb(255, 255, 0);
+  }
+  70% {
+    transform: rotate(-25deg) scale(1.25);
+    color: rgb(200, 200, 0);
+  }
+  80% {
+    transform: rotate(-20deg) scale(1.2);
+    color: rgb(141, 35, 35);
+  }
+  85% {
+    transform: rotate(-15deg) scale(1.15);
+    color: rgb(182, 70, 70);
+  }
+  90% {
+    transform: rotate(-10deg) scale(1.1);
+    color: rgb(224, 106, 106);
+  }
+  95% {
+    transform: rotate(-5deg) scale(1.05);
+    color: rgb(224, 150, 150);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    color: var(--color-fourth);
+  }
+}
+@media (hover: hover) {
+  .options-box i:hover {
+    background: var(--color-third);
+  }
 }
 @media screen and (max-width: 70.3rem) {
   .aboutContainer {

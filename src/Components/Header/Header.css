@@ -60,9 +60,34 @@ header {
   font-size: 1.1em;
   color: var(--color-switch);
 }
-
 .toggle:checked ~ .toggle-container::before {
   transform: translateX(-105%);
+}
+.header-select-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.6rem;
+  background-color: var(--color-primary);
+  color: var(--color-switch);
+  border-radius: 2rem;
+  cursor: pointer;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  position: absolute;
+}
+.header-select {
+  padding: 0 0.2rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: var(--color-switch);
+  font-size: 0.9em;
+}
+.header-select option {
+  background-color: var(--color-primary);
+  color: var(--color-switch);
 }
 .container-info {
   width: 100%;
@@ -224,6 +249,9 @@ nav ol li.active::before {
   }
   .presentation {
     width: calc(100% - 6rem);
+  }
+  nav ol {
+    gap: 1.2rem;
   }
 }
 @media screen and (max-width: 34.4rem) {

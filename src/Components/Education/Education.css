@@ -72,6 +72,9 @@
     padding: 1rem;
     padding-bottom: 5rem;
   }
+  .education {
+    padding-left: 0.5rem;
+  }
 }
 @media screen and (max-width: 34.4rem) {
   .educationContainer {

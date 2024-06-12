@@ -1,6 +1,6 @@
 export const SkillsData = [
   {
-    category: "Programming Languages",
+    category: { en: "Programming Languages", es: "Lenguajes de Programación" },
     items: [
       { icon: "bx bxl-java", name: "Java" },
       { icon: "bx bx-code-alt", name: "C#" },
@@ -11,32 +11,41 @@ export const SkillsData = [
     ],
   },
   {
-    category: "Frontend and Backend Development",
+    category: {
+      en: "Frontend and Backend Development",
+      es: "Desarrollo Frontend y Backend",
+    },
     items: [
       { icon: "bx bxl-react", name: "React" },
       { icon: "bx bxl-nodejs", name: "Node.js" },
     ],
   },
   {
-    category: "Mobile App Development",
+    category: {
+      en: "Mobile App Development",
+      es: "Desarrollo de Aplicaciones Móviles",
+    },
     items: [{ icon: "bx bxl-react", name: "React Native" }],
   },
   {
-    category: "Database Management",
+    category: { en: "Database Management", es: "Gestión de Bases de Datos" },
     items: [
       { icon: "bx bxl-postgresql", name: "SQL Server" },
       { icon: "bx bxl-mongodb", name: "MongoDB" },
     ],
   },
   {
-    category: "Development and Version Control Tools",
+    category: {
+      en: "Development and Version Control Tools",
+      es: "Herramientas de Desarrollo y Control de Versiones",
+    },
     items: [
       { icon: "bx bxl-git", name: "Git" },
       { icon: "bx bxl-github", name: "GitHub" },
     ],
   },
   {
-    category: "Design and Prototyping",
+    category: { en: "Design and Prototyping", es: "Diseño y Prototipado" },
     items: [
       { icon: "bx bxl-figma", name: "Figma" },
       { icon: "bx bxs-pen", name: "Photoshop" },

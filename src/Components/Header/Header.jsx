@@ -1,12 +1,21 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import i18next from "../../../services/i18next.js";
 import "./Header.css";
 
 const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
   const audio = new Audio("/sound-click.mp3");
+  const { t } = useTranslation();
 
   const handleCheckboxChange = (event) => {
     audio.play();
     handleChange(event);
+  };
+
+  const changeLanguage = async (event) => {
+    const lng = event.target.value;
+    i18next.changeLanguage(lng);
+    localStorage.setItem("selectedLanguage", lng);
   };
 
   return (
@@ -29,6 +38,18 @@ const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
             <i className="bx bxs-sun"></i>
             <i className="bx bxs-moon"></i>
           </label>
+          <div className="header-select-container">
+            <i className="fa-solid fa-language" />
+            <select
+              name="language"
+              className="header-select"
+              onChange={changeLanguage}
+              value={i18next.language}
+            >
+              <option value="en">{t("english")}</option>
+              <option value="es">{t("spanish")}</option>
+            </select>
+          </div>
         </div>
       </div>
       <div className="container-info">
@@ -42,23 +63,20 @@ const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
         <div className="presentation">
           <h1 title="Sebastian Monsalve">
             Sebastian Monsalve
-            <i className="fa-solid fa-circle-check" title="verified"></i>
+            <i className="fa-solid fa-circle-check" title={t("verified")}></i>
           </h1>
           <div className="sub">
             <span>@sebasmonsalve16</span>
             <span>
-              <i className="fa-solid fa-cake-candles"></i>16th of May
+              <i className="fa-solid fa-cake-candles"></i>
+              {t("birthday")}
             </span>
             <span>
-              <i className="fa-solid fa-location-dot"></i>Colombian
+              <i className="fa-solid fa-location-dot"></i>
+              {t("location")}
             </span>
           </div>
-          <p>
-            Computer Engineering student aspiring to become a full-stack
-            developer, currently focusing on front-end development, including
-            design and user experience. Offering a keen eye for detail and a
-            passion for creating seamless and intuitive digital solutions.
-          </p>
+          <p>{t("description")}</p>
           <a
             className="link"
             href="https://mail.google.com/mail/?view=cm&fs=1&to=jsmonsalvec16@gmail.com"
@@ -102,28 +120,28 @@ const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
             className={selectedSection === "projects" ? "active" : ""}
             onClick={() => onMenuClick("projects")}
           >
-            Projects
+            {t("projects")}
           </li>
           <li
             id="skills"
             className={selectedSection === "skills" ? "active" : ""}
             onClick={() => onMenuClick("skills")}
           >
-            Skills
+            {t("skills")}
           </li>
           <li
             id="about"
             className={selectedSection === "about" ? "active" : ""}
             onClick={() => onMenuClick("about")}
           >
-            About Me
+            {t("about")}
           </li>
           <li
             id="education"
             className={selectedSection === "education" ? "active" : ""}
             onClick={() => onMenuClick("education")}
           >
-            Education
+            {t("education")}
           </li>
         </ol>
       </nav>

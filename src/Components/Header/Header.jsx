@@ -54,9 +54,10 @@ const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
             </span>
           </div>
           <p>
-            Aspiring computer engineer drawn towards full-stack development,
-            eagerly embracing the challenges and complexities of creating
-            seamless and innovative digital solutions.
+            Computer Engineering student aspiring to become a full-stack
+            developer, currently focusing on front-end development, including
+            design and user experience. Offering a keen eye for detail and a
+            passion for creating seamless and intuitive digital solutions.
           </p>
           <a
             className="link"

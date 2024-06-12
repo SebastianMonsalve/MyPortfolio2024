@@ -23,6 +23,7 @@
   object-fit: cover;
   height: 100%;
   transition: all 0.3s;
+  filter: saturate(110%);
 }
 .image-project:hover img {
   transform: scale(1.05);
@@ -161,6 +162,9 @@
   .content-project {
     width: 95%;
     padding: 0;
+  }
+  .sub-tech {
+    column-gap: 0.8rem;
   }
 }
 @media screen and (max-width: 30.75rem) {

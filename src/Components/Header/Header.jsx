@@ -35,8 +35,8 @@ const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
             checked={isChecked}
           />
           <label htmlFor="check" className="toggle-container">
-            <i className="bx bxs-sun"></i>
-            <i className="bx bxs-moon"></i>
+            <i className="bx bxs-sun" />
+            <i className="bx bxs-moon" />
           </label>
           <div className="header-select-container">
             <i className="fa-solid fa-language" />
@@ -55,7 +55,7 @@ const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
       <div className="container-info">
         <div className="profile">
           <img
-            src="/Profile.jpg"
+            src="/Profile.webp"
             alt="Profile photo to Sebastian Monsalve"
             draggable="false"
           />
@@ -63,16 +63,16 @@ const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
         <div className="presentation">
           <h1 title="Sebastian Monsalve">
             Sebastian Monsalve
-            <i className="fa-solid fa-circle-check" title={t("verified")}></i>
+            <i className="fa-solid fa-circle-check" title={t("verified")} />
           </h1>
           <div className="sub">
             <span>@sebasmonsalve16</span>
             <span>
-              <i className="fa-solid fa-cake-candles"></i>
+              <i className="fa-solid fa-cake-candles" />
               {t("birthday")}
             </span>
             <span>
-              <i className="fa-solid fa-location-dot"></i>
+              <i className="fa-solid fa-location-dot" />
               {t("location")}
             </span>
           </div>
@@ -81,6 +81,7 @@ const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
             className="link"
             href="https://mail.google.com/mail/?view=cm&fs=1&to=jsmonsalvec16@gmail.com"
             target="_blank"
+            rel="noopener noreferrer"
           >
             jsmonsalvec16@gmail.com
           </a>
@@ -90,8 +91,10 @@ const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
               className="in"
               title="LinkedIn"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              <i className="fa-solid fa-bell" target="_blank"></i>LinkedIn
+              <i className="fa-solid fa-bell" target="_blank" />
+              LinkedIn
               <span>⌵</span>
             </a>
             <a
@@ -99,16 +102,18 @@ const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
               className="soc"
               title="Instagram"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              <i className="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-instagram" />
             </a>
             <a
               href="https://github.com/SebastianMonsalve"
               className="soc"
               title="GitHub"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              <i className="fa-brands fa-github"></i>
+              <i className="fa-brands fa-github" />
             </a>
           </div>
         </div>

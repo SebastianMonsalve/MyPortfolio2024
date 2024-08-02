@@ -19,8 +19,8 @@ export const ProjectsData = [
       en: "CODE JOURNEY.  Our app offers interactive lessons, practical exercises, and progress tracking tools for both beginners and experts. Start your journey with us and achieve your educational goals effectively and enjoyably! With gamified lessons, rankings, achievements, and a fun, effective, and free learning experience, Code Journey makes learning programming feel like a game, effortlessly forming a habit of learning.",
       es: "CODE JOURNEY. Nuestra aplicación ofrece lecciones interactivas, ejercicios prácticos y herramientas de seguimiento de progreso tanto para principiantes como para expertos. ¡Comienza tu viaje con nosotros y alcanza tus objetivos educativos de manera efectiva y agradable! Con lecciones gamificadas, clasificaciones, logros y una experiencia de aprendizaje divertida, efectiva y gratuita, Code Journey hace que aprender a programar se sienta como un juego, formando sin esfuerzo un hábito de aprendizaje.",
     },
-    github: "https://github.com/SebastianMonsalve",
     web: "https://codejourney.netlify.app/",
+    figma: "https://shorturl.at/rLEuW",
   },
   {
     title: {
@@ -50,7 +50,6 @@ export const ProjectsData = [
       es: "ELITE. Este sistema de facturación para restaurantes permite la creación de perfiles de empleados con fotos, lo que permite al personal de servicio acceder al sistema haciendo clic en su tarjeta de foto e ingresando su contraseña. El sistema realiza un seguimiento preciso de los pagos en efectivo y por transferencia, guardando todas las facturas como PDF y permitiendo que el inventario y los informes se exporten en formato PDF o Excel. Los alimentos se categorizan por imagen y nombre, facilitando la facturación fácil y eficiente.",
     },
     github: "https://github.com/SebastianMonsalve/Elite---facturation-system",
-    web: "https://sebastianmonsalve.netlify.app/",
   },
   {
     title: {
@@ -95,6 +94,5 @@ export const ProjectsData = [
       es: "HBS. Este software de facturación para hoteles, ofrece una solución integral para gestionar varios aspectos de las operaciones hoteleras. Los usuarios pueden crear y gestionar habitaciones, paquetes, productos y otros elementos de forma sencilla, generando reservas y creando facturas sin problemas con todos los detalles necesarios.",
     },
     github: "https://github.com/SebastianMonsalve/project-POO",
-    web: "https://sebastianmonsalve.netlify.app/",
   },
 ];

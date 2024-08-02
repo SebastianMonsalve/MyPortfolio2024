@@ -57,7 +57,7 @@ const About = () => {
         <div className="about-box" key={index}>
           <div className="content-box">
             <div className="image-profile-box">
-              <img src="/Profile.jpg" alt="image profile" draggable="false" />{" "}
+              <img src="/Profile.webp" alt="image profile" draggable="false" />{" "}
             </div>
             <div className="content-info-box">
               <h2>Sebastian Monsalve</h2>

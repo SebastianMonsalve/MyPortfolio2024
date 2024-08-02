@@ -25,16 +25,32 @@ const Projects = () => {
           <div className="image-project">
             <img src={item.image} alt={item.title} draggable="false" />
             <div className="options-project">
-              <a href={item.github} target="_blank">
-                <i className="fa-brands fa-github" title={t("github")} />
-              </a>
-              <a href={item.web} target="_blank">
-                <i className="fa-solid fa-link" title={t("web")} />
-              </a>
+              {item.github ? (
+                <a href={item.github} target="_blank" rel="noopener noreferrer">
+                  <i className="fa-brands fa-github" title={t("github")} />
+                </a>
+              ) : null}
+              {item.web ? (
+                <a href={item.web} target="_blank" rel="noopener noreferrer">
+                  <i className="fa-solid fa-link" title={t("web")} />
+                </a>
+              ) : null}
+              {item.figma ? (
+                <a href={item.figma} target="_blank" rel="noopener noreferrer">
+                  <i className="fa-brands fa-figma" title={t("figma")} />
+                </a>
+              ) : null}
             </div>
           </div>
           <div className="content-project">
-            <h2>{item.title}</h2>
+            <a
+              href={item.web || item.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="title-project"
+            >
+              {item.title}
+            </a>
             <div className="sub-project">
               <div className="sub-info">
                 <span>

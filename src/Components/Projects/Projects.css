@@ -34,7 +34,7 @@
   display: block;
 }
 .options-project {
-  width: 2.5rem;
+  width: 2.6rem;
   height: 100%;
   position: absolute;
   z-index: 2;
@@ -47,8 +47,8 @@
   display: none;
 }
 .options-project i {
-  width: 2rem;
-  height: 2rem;
+  width: 2.2rem;
+  height: 2.2rem;
   border-radius: 0.3rem;
   display: flex;
   justify-content: center;
@@ -63,10 +63,13 @@
   width: calc(100% - 20rem);
   padding: 0 1rem;
 }
-.content-project h2 {
+.content-project .title-project {
   color: var(--color-fourth);
+  font-weight: 600;
   font-size: 1.1em;
-  margin-bottom: 0.15rem;
+}
+.content-project .title-project:hover {
+  color: var(--color-sixth);
 }
 .content-project p {
   font-size: 0.85em;
@@ -79,6 +82,7 @@
   flex-wrap: wrap;
   font-size: 0.85em;
   color: var(--color-second);
+  margin-top: 0.2rem;
   margin-bottom: 0.5rem;
 }
 .sub-info {

@@ -1,6 +1,20 @@
 export const ProjectsData = [
   {
     title: {
+      en: "Interactive Blog Platform",
+      es: "Plataforma de blog interactivo",
+    },
+    image: "/mi-voz-escrita.png",
+    year: 2024,
+    tech: ["React", "CSS", "TailwindCSS", "JavaScript", "Firebase", "tinyMCE"],
+    description: {
+      en: "MI VOZ ESCRITA. This page is a blog where an administrator can upload posts, including a title, description, category, and image. It offers extensive customization options, such as centering text, adding bold sections, and creating subtitles. The page updates in real-time, allowing users to view posts and add comments with their name, message, and emojis. The homepage displays the latest post along with other entries, with options to access all posts and filter by title or category. It features a minimalist and attractive design, ideal for those seeking a straightforward and elegant experience.",
+      es: "MI VOZ ESCRITA. Esta página es un blog donde un administrador puede subir publicaciones, incluyendo un título, descripción, categoría e imagen. Ofrece amplias opciones de personalización, como centrar el texto, añadir secciones en negrita y crear subtítulos. La página se actualiza en tiempo real, permitiendo que los usuarios vean las publicaciones y agreguen comentarios con su nombre, mensaje y emojis. La página principal muestra la última publicación junto con algunas otras, con opciones para acceder a todas las publicaciones y filtrar por título o categoría. Presenta un diseño minimalista y atractivo, ideal para aquellos que buscan una experiencia directa y elegante.",
+    },
+    web: "https://mivozescrita.netlify.app/",
+  },
+  {
+    title: {
       en: "Mobile programming learning application",
       es: "Aplicación móvil para aprender programación",
     },

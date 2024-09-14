@@ -56,4 +56,16 @@ export const EducationData = [
       es: "Skills for all with Cisco",
     },
   },
+  {
+    icon: "fa-solid fa-certificate",
+    period: "2024",
+    title: {
+      en: "Introduction to Cybersecurity Certificate",
+      es: "Certificado de Introducción a la Ciberseguridad",
+    },
+    institution: {
+      en: "Skills for all with Cisco",
+      es: "Skills for all with Cisco",
+    },
+  },
 ];

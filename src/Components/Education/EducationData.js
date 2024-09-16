@@ -60,8 +60,8 @@ export const EducationData = [
     icon: "fa-solid fa-certificate",
     period: "2024",
     title: {
-      en: "Introduction to Cybersecurity Certificate",
-      es: "Certificado de Introducción a la Ciberseguridad",
+      en: "Introduction to Cybersecurity Certification",
+      es: "Certificación en Introducción a la Ciberseguridad",
     },
     institution: {
       en: "Skills for all with Cisco",

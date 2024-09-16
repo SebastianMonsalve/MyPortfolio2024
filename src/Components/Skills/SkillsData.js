@@ -2,12 +2,11 @@ export const SkillsData = [
   {
     category: { en: "Programming Languages", es: "Lenguajes de Programación" },
     items: [
-      { icon: "bx bxl-java", name: "Java" },
       { icon: "bx bx-code-alt", name: "C#" },
+      { icon: "bx bxl-python", name: "Python" },
       { icon: "bx bxl-javascript", name: "JavaScript" },
       { icon: "bx bxl-html5", name: "HTML" },
       { icon: "bx bxl-css3", name: "CSS" },
-      { icon: "bx bxl-python", name: "Python" },
     ],
   },
   {
@@ -18,6 +17,7 @@ export const SkillsData = [
     items: [
       { icon: "bx bxl-react", name: "React" },
       { icon: "bx bxl-nodejs", name: "Node.js" },
+      { icon: "bx bxl-tailwind-css", name: "Tailwind CSS" },
     ],
   },
   {

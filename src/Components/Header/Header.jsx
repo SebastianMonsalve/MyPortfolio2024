@@ -45,7 +45,7 @@ const Header = ({ handleChange, isChecked }) => {
     <header>
       <div className="banner">
         <img
-          src="/banner.jpg"
+          src="/banner.webp"
           alt="Banner image to Sebastian Monsalve"
           draggable="false"
         />

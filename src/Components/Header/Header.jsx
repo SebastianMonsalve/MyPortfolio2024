@@ -1,11 +1,34 @@
 import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18next from "../../../services/i18next.js";
 import "./Header.css";
 
-const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
+const Header = ({ handleChange, isChecked }) => {
   const audio = new Audio("/sound-click.mp3");
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const navigationMap = {
+    projects: "/",
+    skills: "/skills",
+    about: "/about",
+    education: "/education",
+  };
+
+  const getActiveSection = () => {
+    const currentPath = location.pathname;
+    return (
+      Object.keys(navigationMap).find(
+        (key) => navigationMap[key] === currentPath
+      ) || "projects"
+    );
+  };
+
+  const handleNavigation = (section) => {
+    navigate(navigationMap[section]);
+  };
 
   const handleCheckboxChange = (event) => {
     audio.play();
@@ -120,36 +143,19 @@ const Header = ({ handleChange, isChecked, onMenuClick, selectedSection }) => {
       </div>
       <nav>
         <ol id="menu">
-          <li
-            id="projects"
-            className={selectedSection === "projects" ? "active" : ""}
-            onClick={() => onMenuClick("projects")}
-          >
-            {t("projects")}
-          </li>
-          <li
-            id="skills"
-            className={selectedSection === "skills" ? "active" : ""}
-            onClick={() => onMenuClick("skills")}
-          >
-            {t("skills")}
-          </li>
-          <li
-            id="about"
-            className={selectedSection === "about" ? "active" : ""}
-            onClick={() => onMenuClick("about")}
-          >
-            {t("about")}
-          </li>
-          <li
-            id="education"
-            className={selectedSection === "education" ? "active" : ""}
-            onClick={() => onMenuClick("education")}
-          >
-            {t("education")}
-          </li>
+          {Object.keys(navigationMap).map((section) => (
+            <li
+              key={section}
+              id={section}
+              className={getActiveSection() === section ? "active" : ""}
+              onClick={() => handleNavigation(section)}
+            >
+              {t(section)}
+            </li>
+          ))}
         </ol>
       </nav>
+
       <div className="line"></div>
     </header>
   );

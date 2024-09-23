@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Projects.css";
 import { ProjectsData } from "./projectsData";
 import { useTranslation } from "react-i18next";
 
 const Projects = () => {
   const { t, i18n } = useTranslation();
+  const [selectedCategory, setSelectedCategory] = useState(t("latest"));
+
+  useEffect(() => {
+    setSelectedCategory(t("latest"));
+  }, [i18n.language, t]);
 
   const translateData = (data) => {
     return data.map((item) => {
@@ -12,15 +17,40 @@ const Projects = () => {
         ...item,
         title: item.title[i18n.language],
         description: item.description[i18n.language],
+        category: item.category[i18n.language],
       };
     });
   };
 
   const Projects = translateData(ProjectsData);
 
+  const categories = [
+    t("latest"),
+    ...new Set(Projects.map((project) => project.category)),
+  ];
+
+  const filteredProjects = Projects.filter((project) => {
+    if (selectedCategory === t("latest")) return true;
+    return project.category === selectedCategory;
+  });
+
   return (
     <section className="projectsContainer">
-      {Projects.map((item, index) => (
+      <div className="filter-category-container">
+        {categories.map((category, index) => (
+          <button
+            key={index}
+            className={`filter-category ${
+              selectedCategory === category ? "active" : ""
+            }`}
+            onClick={() => setSelectedCategory(category)}
+          >
+            <p>{category}</p>
+          </button>
+        ))}
+      </div>
+
+      {filteredProjects.map((item, index) => (
         <div key={index} className="project">
           <div className="image-project">
             <img src={item.image} alt={item.title} draggable="false" />

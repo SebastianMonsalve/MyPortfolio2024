@@ -5,6 +5,43 @@
   padding-bottom: 5rem;
   overflow-x: hidden;
 }
+.filter-category-container {
+  width: 100vw;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+.filter-category {
+  height: 100%;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-third);
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: 0.2s ease all;
+}
+.filter-category p {
+  color: var(--color-primary);
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--color-fourth);
+}
+.filter-category:hover {
+  background-color: var(--color-fifth);
+  transition: 0.2s ease all;
+}
+.filter-category.active {
+  background-color: var(--color-second);
+}
+.filter-category.active p {
+  color: var(--color-primary);
+}
 .project {
   width: 100%;
   height: auto;
@@ -117,6 +154,10 @@
     padding: 1rem;
     padding-bottom: 5rem;
   }
+  .filter-category-container {
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+  }
   .project {
     width: 45%;
     flex-direction: column;
@@ -142,8 +183,6 @@
   .projectsContainer {
     width: 95%;
     display: block;
-    padding: 1rem;
-    padding-bottom: 5rem;
   }
   .project {
     width: 100%;

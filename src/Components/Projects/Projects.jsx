@@ -55,14 +55,14 @@ const Projects = () => {
           <div className="image-project">
             <img src={item.image} alt={item.title} draggable="false" />
             <div className="options-project">
-              {item.github ? (
-                <a href={item.github} target="_blank" rel="noopener noreferrer">
-                  <i className="fa-brands fa-github" title={t("github")} />
-                </a>
-              ) : null}
               {item.web ? (
                 <a href={item.web} target="_blank" rel="noopener noreferrer">
                   <i className="fa-solid fa-link" title={t("web")} />
+                </a>
+              ) : null}
+              {item.github ? (
+                <a href={item.github} target="_blank" rel="noopener noreferrer">
+                  <i className="fa-brands fa-github" title={t("github")} />
                 </a>
               ) : null}
               {item.figma ? (

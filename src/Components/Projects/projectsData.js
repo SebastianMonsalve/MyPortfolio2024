@@ -1,6 +1,25 @@
 export const ProjectsData = [
   {
     title: {
+      en: "IA Assistant",
+      es: "Asistente de IA",
+    },
+    image: "/mentoria.webp",
+    year: 2025,
+    tech: ["Python", "Streamlit", "OpenRouter API"],
+    category: {
+      en: "Web",
+      es: "Web",
+    },
+    description: {
+      en: "MENTORIAIA. Is an interactive assistant that helps users generate diverse types of content. It provides a simple yet powerful interface where users can create TikTok scripts, social media posts, professional emails, business ideas, programming code, and even perform translations. It also includes a 'Custom' option for maximum flexibility. The interface is built with Streamlit and connects to the OpenAI API via OpenRouter, offering a fast and user-friendly experience.",
+      es: "MENTORIA. Es un asistente interactivo que ayuda a los usuarios a generar distintos tipos de contenido. Ofrece una interfaz sencilla pero potente para crear guiones de TikTok, publicaciones para redes sociales, correos profesionales, ideas de negocio, código de programación e incluso traducciones. También incluye una opción 'Personalizada' para brindar la máxima flexibilidad. La interfaz está construida con Streamlit y se conecta a la API de OpenAI mediante OpenRouter, ofreciendo una experiencia rápida y fácil de usar.",
+    },
+    github: "https://github.com/SebastianMonsalve/Assistant_AI_MentorIA",
+    web: "https://asistente-mentoria.streamlit.app/",
+  },
+  {
+    title: {
       en: "Interactive Blog Platform",
       es: "Plataforma de blog interactivo",
     },

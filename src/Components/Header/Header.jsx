@@ -78,7 +78,7 @@ const Header = ({ handleChange, isChecked }) => {
       <div className="container-info">
         <div className="profile">
           <img
-            src="/Profile.webp"
+            src="/profile.webp"
             alt="Profile photo to Sebastian Monsalve"
             draggable="false"
           />
